@@ -28,7 +28,7 @@ def listen_write(T):
         f.write(texto)
         f.close()
 
-    Twt = Twitter()
+#    Twt = Twitter()
     data = []
     unit = 1000000
     print 'Simulate for %.2f hours' % T
@@ -58,7 +58,7 @@ def listen_write(T):
             current_T = time()
         if current_T - start_T >= diff_tweet and mean(speeds_down)/unit < ideal_down and mean(speeds_up)/unit < ideal_up:
             msge = '%.2f Down y %.2f Up (avg diario) es menos de lo acordado o no? #VTR #ParenDeCagarme' % (mean(speeds_down)/unit, mean(speeds_up)/unit)
-            Twt.tweet(msge)
+#            Twt.tweet(msge)
             diff_tweet += dia
             current_T = time()
 
